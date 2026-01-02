@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search | Empire Rewritten</title>
-  <meta name="description" content="Search the Empire Rewritten hub for books, world, library, and press.">
+  <meta name="description" content="Search the Empire Rewritten hub for books, world, news, and press.">
   <meta property="og:title" content="Search Empire Rewritten">
-  <meta property="og:description" content="Find pages and media across the hub.">
+  <meta property="og:description" content="Find pages and updates across the hub.">
   <meta property="og:image" content="../assets/img/og-default.webp">
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="icon" href="../favicon.ico">
@@ -18,9 +18,7 @@
         <a href="../index.html#newsletter" class="nav-link">Join Newsletter</a>
       </div>
       <div class="brand">
-        <div class="crest" aria-hidden="true">ER</div>
-        <div class="brand-title">EMPIRE REWRITTEN</div>
-        <div class="brand-sub">Official Codex</div>
+        <img src="../assets/img/ER%20BAN.png" class="brand-logo-banner" alt="Empire Rewritten banner">
       </div>
       <div class="utility-links">
         <a href="index.html" class="nav-link">Search</a>
@@ -33,7 +31,6 @@
         <li><a href="../world/index.html">World</a></li>
         <li><a href="../news/index.html">News</a></li>
         <li><a href="../about/index.html">About</a></li>
-        <li><a href="../library/index.html">Library</a></li>
       </ul>
     </nav>
   </header>
@@ -41,8 +38,8 @@
   <main>
     <section class="section">
       <h1>Search the Hub</h1>
-      <p>Type to filter key pages and library items.</p>
-      <input class="search-box" type="search" id="site-search" placeholder="Search books, world, library..." aria-label="Search the site">
+      <p>Type to filter key pages and highlights.</p>
+      <input class="search-box" type="search" id="site-search" placeholder="Search books, world, news..." aria-label="Search the site">
     </section>
 
     <section class="section">
@@ -65,7 +62,6 @@
           <li><a href="../world/characters/index.html">Characters</a></li>
           <li><a href="../world/timeline/index.html">Timeline</a></li>
           <li><a href="../world/maps/index.html">Maps</a></li>
-          <li><a href="../library/index.html">Library</a></li>
         </ul>
       </div>
       <div>
@@ -92,20 +88,17 @@
       { title: 'Characters', url: '../world/characters/index.html', category: 'World' },
       { title: 'Timeline', url: '../world/timeline/index.html', category: 'World' },
       { title: 'Maps', url: '../world/maps/index.html', category: 'World' },
-      { title: 'Library', url: '../library/index.html', category: 'Media' },
       { title: 'Patreon', url: '../patreon/index.html', category: 'Support' },
       { title: 'Press Kit', url: '../press/index.html', category: 'Press' }
     ];
 
     const resultsEl = document.getElementById('search-results');
     const input = document.getElementById('site-search');
-    let libraryItems = [];
 
     function render(query = '') {
       resultsEl.innerHTML = '';
       const q = query.toLowerCase();
-      const merged = [...staticLinks, ...libraryItems];
-      merged
+      staticLinks
         .filter(item => item.title.toLowerCase().includes(q) || item.category.toLowerCase().includes(q))
         .forEach(item => {
           const link = document.createElement('a');
@@ -121,24 +114,8 @@
       }
     }
 
-    async function loadLibrary() {
-      try {
-        const res = await fetch('../assets/data/library.json');
-        const data = await res.json();
-        libraryItems = data.map(item => ({
-          title: item.title,
-          url: '../library/index.html',
-          category: `Library • ${item.category}`
-        }));
-      } catch (e) {
-        libraryItems = [];
-      }
-      render(input.value);
-    }
-
     input.addEventListener('input', () => render(input.value));
     render('');
-    loadLibrary();
   </script>
 </body>
 </html>

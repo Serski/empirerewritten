@@ -57,12 +57,12 @@ header.site-header {
   display: block;
   border-radius: 0;
   object-fit: contain;
-  width: min(420px, 90vw);
+  width: clamp(220px, 60vw, 420px);
   height: auto;
   margin: 0 auto;
 }
 
-.hero .brand-logo-banner { width: min(520px, 92vw); }
+.hero .brand-logo-banner { width: clamp(260px, 70vw, 520px); }
 
 .nav-links {
   display: flex;
