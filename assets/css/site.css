@@ -135,14 +135,16 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   border-radius: 0;
 }
 
-.hero-inner {
+.hero {
   position: relative;
-  z-index: 1;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  gap: 12px;
-  text-align: center;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  min-height: 320px;
+  background: url('../img/Blackh.png') center/cover no-repeat;
+  /* no border, no border-radius */
 }
 
 .hero-kicker {
