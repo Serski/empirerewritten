@@ -55,11 +55,11 @@ header.site-header {
 
 .brand-logo-banner {
   display: block;
+  margin: 0 auto;
+  width: clamp(240px, 50vw, 420px);
+  height: auto;
   border-radius: 0;
   object-fit: contain;
-  width: clamp(220px, 60vw, 420px);
-  height: auto;
-  margin: 0 auto;
 }
 
 .hero .brand-logo-banner { width: clamp(260px, 70vw, 520px); }
