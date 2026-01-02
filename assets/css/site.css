@@ -53,25 +53,16 @@ header.site-header {
   text-align: center;
 }
 
-.brand-logo-eagle,
-.brand-logo-text {
+.brand-logo-banner {
   display: block;
   border-radius: 0;
   object-fit: contain;
+  width: min(420px, 90vw);
+  height: auto;
+  margin: 0 auto;
 }
 
-.brand-logo-eagle { height: 48px; }
-.brand-logo-text { height: 22px; }
-
-.hero .brand-logo-eagle { height: 96px; }
-.hero .brand-logo-text { height: 44px; }
-
-.brand-sub {
-  color: var(--muted);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-}
+.hero .brand-logo-banner { width: min(520px, 92vw); }
 
 .nav-links {
   display: flex;
@@ -136,7 +127,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 .hero {
   position: relative;
   margin: 32px 0 0;
-  padding: 22px 0 72px;
+  padding: 30px 0 86px;
   background: linear-gradient(180deg, rgba(5, 5, 8, 0.75), rgba(5, 5, 8, 0.85)), url('../img/hero.webp') center/cover no-repeat;
   width: 100vw;
   left: 50%;
