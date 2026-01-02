@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>./index.html</loc></url>
+  <url><loc>./books/index.html</loc></url>
+  <url><loc>./world/index.html</loc></url>
+  <url><loc>./world/characters/index.html</loc></url>
+  <url><loc>./world/timeline/index.html</loc></url>
+  <url><loc>./world/maps/index.html</loc></url>
+  <url><loc>./library/index.html</loc></url>
+  <url><loc>./news/index.html</loc></url>
+  <url><loc>./about/index.html</loc></url>
+  <url><loc>./patreon/index.html</loc></url>
+  <url><loc>./press/index.html</loc></url>
+  <url><loc>./privacy/index.html</loc></url>
+  <url><loc>./search/index.html</loc></url>
+</urlset>

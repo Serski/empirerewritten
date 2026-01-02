@@ -1,0 +1,24 @@
+{
+  "aheadCount": 5,
+  "externalLinks": {
+    "patreonUrl": "",
+    "patreonBook1Url": "",
+    "patreonBook2Url": "",
+    "royalRoadBook1Url": "",
+    "latestFreeUrl": "",
+    "contactEmail": "contact@example.com",
+    "socials": {
+      "twitter": "",
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  "baseUrl": "",
+  "baseUrlNote": "Set when deploying to a custom domain or path if desired.",
+  "analytics": {
+    "enabled": false,
+    "provider": "",
+    "trackingId": ""
+  }
+}

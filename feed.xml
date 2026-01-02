@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Empire Rewritten News</title>
+    <link>./news/index.html</link>
+    <description>Placeholder RSS feed for Empire Rewritten updates.</description>
+    <item>
+      <title>World Update Placeholder</title>
+      <link>./news/index.html</link>
+      <description>Newest lore updates and chapter scheduling.</description>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Patreon Milestone</title>
+      <link>./patreon/index.html</link>
+      <description>Celebrating early chapter access.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

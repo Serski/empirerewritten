@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Crest of the Empire",
+    "caption": "Official seal used across the capital banners.",
+    "category": "Books",
+    "tags": ["emblem", "capital"],
+    "src": "../assets/img/library/books/crest.webp",
+    "width": 800,
+    "height": 600,
+    "credit": "Art Team",
+    "source": ""
+  },
+  {
+    "title": "Hero Portrait",
+    "caption": "Protagonist profile under low light.",
+    "category": "Characters",
+    "tags": ["hero", "portrait"],
+    "src": "../assets/img/library/characters/hero.webp",
+    "width": 800,
+    "height": 600,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Council Chamber Map",
+    "caption": "Top-down view of the imperial council hall.",
+    "category": "Maps",
+    "tags": ["interior", "capital"],
+    "src": "../assets/img/library/maps/council.webp",
+    "width": 1000,
+    "height": 700,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Era One Timeline",
+    "caption": "Key events before the fall.",
+    "category": "Timeline",
+    "tags": ["era one", "history"],
+    "src": "../assets/img/library/timeline/era-one.webp",
+    "width": 1200,
+    "height": 650,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Frontier Dispatch",
+    "caption": "Newsletter broadsheet from the frontier provinces.",
+    "category": "News",
+    "tags": ["dispatch", "frontier"],
+    "src": "../assets/img/library/news/frontier.webp",
+    "width": 800,
+    "height": 600,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Scout Notes",
+    "caption": "Field notes recovered from the western wastes.",
+    "category": "Misc",
+    "tags": ["notes", "field"],
+    "src": "../assets/img/library/misc/notes.webp",
+    "width": 900,
+    "height": 600,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Royal Parade",
+    "caption": "Procession through the dawn-lit avenue.",
+    "category": "Books",
+    "tags": ["parade", "book1"],
+    "src": "../assets/img/library/books/parade.webp",
+    "width": 1100,
+    "height": 700,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Cartographer Draft",
+    "caption": "Work-in-progress frontier map sketch.",
+    "category": "Maps",
+    "tags": ["draft", "frontier"],
+    "src": "../assets/img/library/maps/draft.webp",
+    "width": 1000,
+    "height": 700,
+    "credit": "",
+    "source": ""
+  },
+  {
+    "title": "Heir Apparent",
+    "caption": "Candid moment before the coronation.",
+    "category": "Characters",
+    "tags": ["heir", "candid"],
+    "src": "../assets/img/library/characters/heir.webp",
+    "width": 900,
+    "height": 600,
+    "credit": "",
+    "source": ""
+  }
+]
