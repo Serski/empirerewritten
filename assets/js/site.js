@@ -65,7 +65,6 @@
       { key: 'world', selector: 'a[href$="world/index.html"], a[href="world/"]' },
       { key: 'news', selector: 'a[href$="news/index.html"], a[href="news/"]' },
       { key: 'about', selector: 'a[href$="about/index.html"], a[href="about/"]' },
-      { key: 'library', selector: 'a[href$="library/index.html"], a[href="library/"]' },
       { key: 'patreon', selector: 'a[href$="patreon/index.html"], a[href="patreon/"]' },
     ];
     navMap.forEach(({ key, selector }) => {
