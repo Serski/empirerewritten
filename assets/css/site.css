@@ -53,16 +53,15 @@ header.site-header {
   text-align: center;
 }
 
-.brand-logo-banner {
+.brand-logo {
   display: block;
   margin: 0 auto;
-  width: clamp(240px, 50vw, 420px);
+  width: clamp(220px, 36vw, 420px);
+  max-height: 120px;
   height: auto;
   border-radius: 0;
   object-fit: contain;
 }
-
-.hero .brand-logo-banner { width: clamp(260px, 70vw, 520px); }
 
 .nav-links {
   display: flex;
