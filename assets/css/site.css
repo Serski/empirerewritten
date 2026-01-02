@@ -124,19 +124,7 @@ header.site-header {
 main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
 .hero {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  padding: 0;            /* remove internal padding if you don’t want a frame */
-  border: none;
-  border-radius: 0;
-}
-
-.hero {
-  /* Break out of the max‑width container */
+  /* break out of the max‑width container to span edge‑to‑edge */
   position: relative;
   left: 50%;
   right: 50%;
@@ -144,13 +132,13 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   margin-right: -50vw;
   width: 100vw;
 
-  /* Set a taller height */
-  min-height: 60vh; /* or use a fixed value like 480px */
+  /* give it the height you want */
+  min-height: 60vh; /* adjust as desired */
 
-  /* Background image covering the entire section */
-  background: url('../img/Blackh.png') center/cover no-repeat;
+  /* display your image anchored at the top */
+  background: url('../img/Blackh.png') top center/cover no-repeat;
 
-  /* Remove card styling */
+  /* remove the old card styling */
   padding: 0;
   border: none;
   border-radius: 0;
