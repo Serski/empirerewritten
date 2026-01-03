@@ -97,24 +97,35 @@ header.site-header {
   box-shadow: var(--glow);
 }
 
+/* Base hamburger button (hidden on desktop by default; shown in the mobile media query) */
 .menu-toggle {
-  display: none;
+  display: none;            /* stays hidden on desktop; mobile overrides this */
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  border: none;
-  background: transparent;
+  width: 32px;              /* width of the button */
+  height: 24px;             /* height to fit three bars and gaps */
   padding: 0;
+  border: none;
+  background: transparent;  /* no background box */
   cursor: pointer;
+  outline: none;            /* remove focus outline */
+  -webkit-tap-highlight-color: transparent; /* remove touch highlight */
 }
 
+/* The three bars inside the burger icon */
 .menu-toggle span {
   display: block;
-  height: 3px;
-  background: var(--text);
+  width: 100%;              /* each bar spans the full button width */
+  height: 3px;              /* thickness of each bar */
+  background: var(--accent);/* golden colour defined in :root */
   border-radius: 3px;
+  margin-bottom: 5px;       /* spacing between bars */
 }
+
+.menu-toggle span:last-child {
+  margin-bottom: 0;         /* no extra space after the last bar */
+}
+
 
 .disabled {
   opacity: 0.6;
