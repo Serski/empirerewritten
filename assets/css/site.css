@@ -379,25 +379,25 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     justify-content: center;
     align-items: center;
     padding: 12px 18px;
-    position: relative; /* anchor for the burger/nav */
+    position: relative; /* anchor for burger/nav positioning */
   }
 
   /* Enlarge the logo and keep it centred */
   .brand-logo {
-    width: clamp(200px, 70vw, 420px); /* allow it to grow up to 70% of viewport width */
+    width: clamp(200px, 70vw, 420px);
     max-height: 160px;
     margin: 0 auto;
     display: block;
   }
 
   /* Position the nav (burger) on the right and align it vertically with the logo */
-  header.site-header nav {
+  nav {
     position: absolute;
     right: 18px;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-    z-index: 40; /* ensure nav is above the crest */
+    z-index: 40; /* ensure nav overlays the crest when positioned */
   }
   .menu-toggle {
     display: flex;
@@ -418,29 +418,28 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   }
 
   /* Turn the nav into a full-screen overlay when open */
-  header nav.open {
+  nav.open {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #050508;        /* dark backdrop */
-    padding-top: 6rem;          /* leave space for the header row */
+    background: #050508;
+    padding-top: 6rem;          /* leaves space for the header row */
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     z-index: 50;
   }
-  /* Stack the menu items vertically within the overlay */
-  header nav.open .nav-links {
-    display: flex;
+  nav.open .nav-links {
     flex-direction: column;
     align-items: center;
     gap: 20px;
     margin-top: 0;
+    display: flex;              /* override hidden state */
   }
-  header nav.open .nav-links a {
-    font-size: 1.25rem;         /* increase font size for menu items */
+  nav.open .nav-links a {
+    font-size: 1.25rem;
     color: var(--text);
   }
 
