@@ -353,7 +353,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 }
 
 @media (max-width: 720px) {
-  /* Show burger menu and position it top‑right aligned with the logo */
+  /* Show burger menu and position it level with the logo */
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -370,10 +370,11 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     cursor: pointer;
     z-index: 30;
   }
+  /* Colour the burger lines in your golden accent */
   .menu-toggle span {
     display: block;
     height: 3px;
-    background: var(--accent); /* golden bars */
+    background: var(--accent);
     border-radius: 3px;
   }
 
@@ -397,25 +398,24 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     margin-top: 12px;
   }
 
-  /* Symmetrical grid: centre the brand in the middle column and anchor relative for the burger */
+  /* 1fr auto 1fr lets the middle column expand for the crest */
   .header-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     gap: 12px;
     align-items: center;
     padding: 12px 18px;
-    position: relative; /* anchor for absolutely positioned burger */
+    position: relative; /* anchor for the absolute burger button */
   }
   .brand {
     justify-self: center;
     width: 100%;
     text-align: center;
   }
-
-  /* Enlarge and centre the logo */
+  /* Give the logo a larger width range on mobile */
   .brand-logo {
-    width: clamp(200px, 60vw, 320px);
-    max-height: 140px;
+    width: clamp(200px, 70vw, 420px);
+    max-height: 160px;
     margin: 0 auto;
     display: block;
   }
