@@ -382,14 +382,21 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
   .utility-links { justify-content: center; }
 
+  .brand-logo {
+    width: clamp(200px, 60vw, 320px);
+    max-height: 120px;
+    margin: 0 auto;
+  }
+
   .hero-heading {
     top: 4rem;
   }
 
   .hero-heading h2 {
     font-size: 3rem;
-    max-width: 80%;
+    line-height: 1.2;
     margin: 0 auto;
+    max-width: 90%;
   }
 
   .hero-heading p {
