@@ -125,7 +125,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
 .hero-heading {
   position: absolute;
-  top: 3rem;
+  top: 6rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
