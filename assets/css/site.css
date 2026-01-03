@@ -133,6 +133,15 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   z-index: 1;
   pointer-events: none;
 }
+.hero-heading h2 {
+  font-size: 3rem;      /* adjust size as desired */
+  margin: 0;
+}
+
+.hero-heading p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0;
+}
 
 .hero {
   /* break out of the max‑width container to span edge‑to‑edge */
