@@ -140,7 +140,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
 .hero-heading p {
   font-size: 2rem;
-  margin: 0.2rem 0 0;
+  margin: 0.1rem 0 0;
 }
 
 .hero {
