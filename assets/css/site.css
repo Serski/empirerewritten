@@ -378,25 +378,25 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     margin-top: 12px;
   }
 
-  /* Use flexbox for the header to center the logo */
+  /* Symmetrical grid: centre the brand in the middle column */
   .header-inner {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
     align-items: center;
     padding: 12px 18px;
   }
+  .brand {
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+  }
 
-  /* Enlarge and center the logo */
+  /* Enlarge and centre the logo */
   .brand-logo {
     width: clamp(200px, 60vw, 320px);
     max-height: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  .brand {
-    width: 100%;
-    text-align: center;
+    margin: 0 auto;
   }
 
   /* Adjust hero heading position and size */
@@ -439,6 +439,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     padding: 24px 16px 48px;
   }
 
+  /* Newsletter form stacks its fields */
   .newsletter {
     grid-template-columns: 1fr;
   }
