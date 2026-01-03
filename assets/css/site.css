@@ -397,7 +397,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-    z-index: 40; /* ensure nav overlays the crest when positioned */
+    z-index: 40;
   }
   .menu-toggle {
     display: flex;
@@ -417,26 +417,27 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     border-radius: 3px;
   }
 
-  /* Turn the nav into a full-screen overlay when open */
+  /* Turn the nav into a full‑screen overlay when open */
   nav.open {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #050508;
-    padding-top: 6rem;          /* leaves space for the header row */
+    transform: none;      /* remove the translateY inherited from nav */
+    background: #050508;  /* dark backdrop */
+    padding-top: 6rem;    /* leave space for the crest and burger row */
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     z-index: 50;
   }
   nav.open .nav-links {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     margin-top: 0;
-    display: flex;              /* override hidden state */
   }
   nav.open .nav-links a {
     font-size: 1.25rem;
