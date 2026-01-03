@@ -39,7 +39,8 @@ header.site-header {
   margin: 0 auto;
   padding: 12px 18px;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* OLD: grid-template-columns: auto 1fr auto; */
+  grid-template-columns: 1fr auto 1fr;
   gap: 12px;
   align-items: center;
 }
