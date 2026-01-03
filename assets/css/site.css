@@ -358,7 +358,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     display: none;
   }
 
-  /* Collapse the nav into a vertical list; show it only when open */
+  /* Collapse the nav into a vertical list; hide it by default */
   nav .nav-links {
     display: none;
     flex-direction: column;
@@ -379,7 +379,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     justify-content: center;
     align-items: center;
     padding: 12px 18px;
-    position: relative; /* so the burger can be positioned absolutely */
+    position: relative; /* anchor for the burger/nav */
   }
 
   /* Enlarge the logo and keep it centred */
@@ -390,13 +390,14 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     display: block;
   }
 
-  /* Position the burger on the right and align it vertically with the logo */
+  /* Position the nav (burger) on the right and align it vertically with the logo */
   header.site-header nav {
     position: absolute;
     right: 18px;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
+    z-index: 40; /* ensure nav is above the crest */
   }
   .menu-toggle {
     display: flex;
@@ -414,6 +415,33 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     height: 3px;
     background: var(--accent); /* gold bars */
     border-radius: 3px;
+  }
+
+  /* Turn the nav into a full-screen overlay when open */
+  header nav.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #050508;        /* dark backdrop */
+    padding-top: 6rem;          /* leave space for the header row */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 50;
+  }
+  /* Stack the menu items vertically within the overlay */
+  header nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0;
+  }
+  header nav.open .nav-links a {
+    font-size: 1.25rem;         /* increase font size for menu items */
+    color: var(--text);
   }
 
   /* Adjust hero heading position and size */
