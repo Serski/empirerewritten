@@ -494,6 +494,9 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   .cards {
     grid-template-columns: 1fr;
   }
+  .cards.two-column {
+    grid-template-columns: 1fr;
+  }
 
   .section {
     margin-top: 24px;
