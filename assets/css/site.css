@@ -292,8 +292,8 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   margin-bottom: 0;
 }
