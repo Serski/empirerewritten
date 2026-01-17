@@ -298,6 +298,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
 .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .list li { padding: 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
+.timeline-date { font-weight: 700; }
 
 .newsletter {
   background: var(--card);
