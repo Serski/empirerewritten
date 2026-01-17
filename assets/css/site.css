@@ -540,6 +540,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   margin: 0 auto;
   padding: 20px 0;
   max-width: 800px;
+  overflow: hidden;
 }
 .timeline::before {
   content: '';
@@ -559,6 +560,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   font-size: 24px;
   font-weight: 700;
   color: var(--accent);
+  clear: both;
 }
 .timeline-event {
   position: relative;
@@ -605,8 +607,11 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     margin-left: 0;
     margin-right: 0;
   }
+  .timeline::before {
+    left: 20px;
+  }
   .timeline-event::before {
-    left: calc(50% - 8px);
+    left: 4px;
     right: auto;
   }
 }
