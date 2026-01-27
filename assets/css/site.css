@@ -382,50 +382,18 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 }
 
 .books-page {
-  background: #F7F3F0;
-  color: #3E2A33;
-}
-
-.books-page a {
-  color: #7B4B66;
-}
-
-.books-page .site-header,
-.books-page .footer {
-  background: #F7F3F0;
-  border-color: rgba(123, 75, 102, 0.2);
-}
-
-.books-page .nav-links a {
-  color: #3E2A33;
-}
-
-.books-page .nav-links a:hover,
-.books-page .nav-links a:focus,
-.books-page .nav-links a.active {
-  color: #7B4B66;
-  background: rgba(123, 75, 102, 0.12);
-  box-shadow: none;
-}
-
-.books-page .tag {
-  background: rgba(123, 75, 102, 0.12);
-  color: #7B4B66;
-}
-
-.books-page .footer a,
-.books-page .legal-bar {
-  color: #5F4152;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .book-hero-card {
   display: flex;
   gap: 24px;
   align-items: center;
-  background: #DCC5BA;
+  background: var(--card);
   border-radius: 20px;
   padding: 24px;
-  color: #3E2A33;
+  color: var(--text);
 }
 
 .book-hero-card img {
@@ -433,20 +401,20 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   max-width: 260px;
   width: 100%;
   height: auto;
-  box-shadow: 0 10px 25px rgba(62, 42, 51, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .book-hero-content h2 {
   margin-top: 0;
   margin-bottom: 12px;
-  color: #7B4B66;
+  color: var(--accent);
   text-align: left;
 }
 
 .book-hero-content p {
   margin-top: 0;
   margin-bottom: 18px;
-  color: #5F4152;
+  color: var(--text);
 }
 
 .book-hero-actions {
@@ -455,18 +423,6 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   flex-wrap: wrap;
 }
 
-.books-page .book-hero-btn {
-  background: #7B4B66;
-  color: #ffffff;
-  border-radius: 999px;
-  box-shadow: none;
-}
-
-.books-page .book-hero-btn:hover,
-.books-page .book-hero-btn:focus {
-  background: #6a3f57;
-  box-shadow: none;
-}
 
 @media (max-width: 720px) {
   /* Hide the desktop newsletter/search/Patreon bar */
@@ -637,7 +593,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     flex-direction: column;
   }
 
-  .book-hero-actions .book-hero-btn {
+  .book-hero-actions .btn {
     width: 100%;
     text-align: center;
   }
