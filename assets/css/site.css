@@ -381,6 +381,93 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   border: 0;
 }
 
+.books-page {
+  background: #F7F3F0;
+  color: #3E2A33;
+}
+
+.books-page a {
+  color: #7B4B66;
+}
+
+.books-page .site-header,
+.books-page .footer {
+  background: #F7F3F0;
+  border-color: rgba(123, 75, 102, 0.2);
+}
+
+.books-page .nav-links a {
+  color: #3E2A33;
+}
+
+.books-page .nav-links a:hover,
+.books-page .nav-links a:focus,
+.books-page .nav-links a.active {
+  color: #7B4B66;
+  background: rgba(123, 75, 102, 0.12);
+  box-shadow: none;
+}
+
+.books-page .tag {
+  background: rgba(123, 75, 102, 0.12);
+  color: #7B4B66;
+}
+
+.books-page .footer a,
+.books-page .legal-bar {
+  color: #5F4152;
+}
+
+.book-hero-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: #DCC5BA;
+  border-radius: 20px;
+  padding: 24px;
+  color: #3E2A33;
+}
+
+.book-hero-card img {
+  border-radius: 16px;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 25px rgba(62, 42, 51, 0.2);
+}
+
+.book-hero-content h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #7B4B66;
+  text-align: left;
+}
+
+.book-hero-content p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #5F4152;
+}
+
+.book-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.books-page .book-hero-btn {
+  background: #7B4B66;
+  color: #ffffff;
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.books-page .book-hero-btn:hover,
+.books-page .book-hero-btn:focus {
+  background: #6a3f57;
+  box-shadow: none;
+}
+
 @media (max-width: 720px) {
   /* Hide the desktop newsletter/search/Patreon bar */
   .site-header .utility-links {
@@ -531,6 +618,28 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   .hero-topbar {
     flex-direction: column;
     gap: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .book-hero-card img {
+    max-width: 100%;
+  }
+
+  .book-hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .book-hero-actions .book-hero-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
