@@ -696,3 +696,13 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
     text-align: left;
   }
 }
+
+/* Grey cards for the About page */
+.about-page .about-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  color: var(--text);
+}
