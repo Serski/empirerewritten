@@ -297,6 +297,22 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   object-fit: contain;
   margin-bottom: 0;
 }
+.card .summary {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.card details summary {
+  cursor: pointer;
+  color: var(--accent);
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+.card details {
+  margin: 0;
+  padding: 0;
+}
 
 .meta-strip {
   display: flex;
