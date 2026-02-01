@@ -295,15 +295,6 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   border-radius: var(--radius);
 }
 
-/* Portrait images on character cards */
-.card .portrait-icon {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: var(--radius);
-}
 .card .faction-icon {
   position: absolute;
   top: 8px;
