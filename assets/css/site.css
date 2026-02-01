@@ -790,3 +790,43 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   margin-bottom: 24px;
   color: var(--text);
 }
+
+/* About page image layout */
+.about-with-image {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.about-with-image .about-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.about-with-image .about-text {
+  flex: 1;
+}
+
+/* Portrait styling for author card */
+.about-card .author-image {
+  max-width: 150px;
+  height: auto;
+  border-radius: var(--radius);
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 720px) {
+  .about-with-image {
+    flex-direction: column;
+  }
+
+  .about-with-image .about-image img,
+  .about-card .author-image {
+    max-width: 100%;
+    float: none;
+    margin: 0 0 16px;
+  }
+}
