@@ -287,6 +287,14 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 
 .card:hover, .card:focus-within { box-shadow: var(--glow); transform: translateY(-1px); }
 
+/* Home page card images: square thumbnails */
+.cards > a.card > img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 /* Portrait images on character cards */
 .card .portrait-icon {
   width: 100%;
@@ -572,6 +580,9 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   }
   .cards.two-column {
     grid-template-columns: 1fr;
+  }
+  .cards > a.card > img {
+    height: 100px;
   }
   .card .faction-icon {
     width: 22px;
