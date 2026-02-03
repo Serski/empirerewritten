@@ -48,10 +48,22 @@
     </section>
 
     <section class="section">
+      <p class="tag">World Maps</p>
       <div class="card">
-        <h3>Main Map</h3>
-        <p>Capital and surrounding provinces with trade arteries.</p>
-        <div class="meta-strip"><span>Updated monthly</span><span>Patreon gets annotated layers</span></div>
+        <h3>World Maps 1428–1433</h3>
+        <img id="worldMap" src="../../assets/img/1428S%20copy.jpg"
+             alt="World map 1428" style="width: 100%; height: auto; border-radius: var(--radius);">
+        <div class="filters" id="yearFilters" style="margin-top: 12px;">
+          <button class="filter-btn active" data-year="1428">1428</button>
+          <button class="filter-btn" data-year="1429">1429</button>
+          <button class="filter-btn" data-year="1430">1430</button>
+          <button class="filter-btn" data-year="1431">1431</button>
+          <button class="filter-btn" data-year="1432">1432</button>
+          <button class="filter-btn" data-year="1433">1433</button>
+        </div>
+        <p id="mapDescription" style="margin-top: 12px;">
+          The world at the start of our story. Political boundaries are firm, trade routes established, and tensions simmering.
+        </p>
       </div>
     </section>
 
@@ -110,5 +122,52 @@
   </footer>
 
   <script src="../../assets/js/site.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mapData = {
+        '1428': {
+          src: '../../assets/img/1428S%20copy.jpg',
+          desc: 'The world at the start of our story. Political boundaries are firm, trade routes established, and tensions simmering.'
+        },
+        '1429': {
+          src: '../../assets/img/1429S%20copy.jpg',
+          desc: 'No territorial changes this year; leaders consolidate power and prepare for future events.'
+        },
+        '1430': {
+          src: '../../assets/img/1430S%20copy.jpg',
+          desc: 'Borders begin to shift as rival factions test each other’s resolve. Skirmishes and alliances reshape the landscape.'
+        },
+        '1431': {
+          src: '../../assets/img/1431S%20copy.jpg',
+          desc: 'Major campaigns redraw maps. New territories are claimed and some regions fall under occupation.'
+        },
+        '1432': {
+          src: '../../assets/img/1432S%20copy.jpg',
+          desc: 'Peace treaties lead to minor adjustments, while unseen currents set the stage for the coming storm.'
+        },
+        '1433': {
+          src: '../../assets/img/1433S%20copy.jpg',
+          desc: 'The culmination of years of struggle. Old empires crumble and new powers rise from the ashes.'
+        }
+      };
+
+      const mapImg = document.getElementById('worldMap');
+      const description = document.getElementById('mapDescription');
+      const buttons = document.querySelectorAll('#yearFilters .filter-btn');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const year = this.dataset.year;
+
+          mapImg.src = mapData[year].src;
+          mapImg.alt = 'World map ' + year;
+          description.textContent = mapData[year].desc;
+
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
