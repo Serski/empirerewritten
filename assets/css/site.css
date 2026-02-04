@@ -392,7 +392,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
   padding: 18px;
   border-radius: var(--radius);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   align-items: center;
 }
@@ -832,10 +832,10 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 }
 
 /* === MailerLite embed styling overrides === */
-.ml-embedded .ml-form-embedWrapper,
-.ml-embedded .ml-form-embedContainer {
+.newsletter .ml-form-embedWrapper,
+.newsletter .ml-form-embedContainer {
   background: var(--card) !important;
-  border: 1px dashed var(--accent) !important;
+  border: none !important;
   padding: 18px !important;
   border-radius: var(--radius) !important;
   color: var(--text) !important;
