@@ -11,23 +11,12 @@
   <link rel="stylesheet" href="../../assets/css/site.css">
   <link rel="icon" href="../../favicon.ico">
   <style>
-    /* Reduce map width to 80% on screens wider than 720px */
+    /* Desktop: align title/buttons/description to the same centered width as the map image */
     @media (min-width: 720px) {
-      #worldMap {
+      .map-block {
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
-        display: block;
-      }
-    }
-
-    /* Reduce Morea map width to 80% on screens wider than 720px */
-    @media (min-width: 720px) {
-      #moreaMap {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
       }
     }
   </style>
@@ -71,40 +60,46 @@
     <section class="section">
       <p class="tag">World Maps</p>
       <div class="card">
-        <h3>World Maps 1428–1433</h3>
-        <img id="worldMap" src="../../assets/img/1428S%20copy.jpg"
-             alt="World map 1428" style="width: 100%; height: auto; border-radius: var(--radius);">
-        <div class="filters" id="yearFilters" style="margin-top: 12px;">
-          <button class="filter-btn active" data-year="1428">1428</button>
-          <button class="filter-btn" data-year="1429">1429</button>
-          <button class="filter-btn" data-year="1430">1430</button>
-          <button class="filter-btn" data-year="1431">1431</button>
-          <button class="filter-btn" data-year="1432">1432</button>
-          <button class="filter-btn" data-year="1433">1433</button>
+        <div class="map-block">
+          <h3>World Maps 1428–1433</h3>
+          <img id="worldMap"
+               src="../../assets/img/1428S%20copy.jpg"
+               alt="World map 1428"
+               style="width: 100%; height: auto; border-radius: var(--radius);" />
+          <div class="filters" id="yearFilters" style="margin-top: 12px;">
+            <button class="filter-btn active" data-year="1428">1428</button>
+            <button class="filter-btn" data-year="1429">1429</button>
+            <button class="filter-btn" data-year="1430">1430</button>
+            <button class="filter-btn" data-year="1431">1431</button>
+            <button class="filter-btn" data-year="1432">1432</button>
+            <button class="filter-btn" data-year="1433">1433</button>
+          </div>
+          <p id="mapDescription" style="margin-top: 12px;">
+            1428 — The world as it stands at the opening of our story.
+          </p>
         </div>
-        <p id="mapDescription" style="margin-top: 12px;">
-          1428 — The world as it stands at the opening of our story.
-        </p>
       </div>
     </section>
 
     <section class="section">
       <p class="tag">Morea Maps</p>
       <div class="card">
-        <h3>Morea Maps 1428–1433</h3>
-        <img id="moreaMap"
-             src="../../assets/img/Mor1428%20copy.jpg"
-             alt="Morea map 1428"
-             style="width: 100%; height: auto; border-radius: var(--radius);">
-        <div class="filters" id="moreaYearFilters" style="margin-top: 12px;">
-          <button class="filter-btn active" data-year="1428">1428</button>
-          <button class="filter-btn" data-year="1431">1431</button>
-          <button class="filter-btn" data-year="1432">1432</button>
-          <button class="filter-btn" data-year="1433">1433</button>
+        <div class="map-block">
+          <h3>Morea Maps 1428–1433</h3>
+          <img id="moreaMap"
+               src="../../assets/img/Mor1428%20copy.jpg"
+               alt="Morea map 1428"
+               style="width: 100%; height: auto; border-radius: var(--radius);" />
+          <div class="filters" id="moreaYearFilters" style="margin-top: 12px;">
+            <button class="filter-btn active" data-year="1428">1428</button>
+            <button class="filter-btn" data-year="1431">1431</button>
+            <button class="filter-btn" data-year="1432">1432</button>
+            <button class="filter-btn" data-year="1433">1433</button>
+          </div>
+          <p id="moreaMapDescription" style="margin-top: 12px;">
+            The Morea region at the start of our story.
+          </p>
         </div>
-        <p id="moreaMapDescription" style="margin-top: 12px;">
-          The Morea region at the start of our story.
-        </p>
       </div>
     </section>
 
