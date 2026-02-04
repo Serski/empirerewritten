@@ -20,6 +20,16 @@
         display: block;
       }
     }
+
+    /* Reduce Morea map width to 80% on screens wider than 720px */
+    @media (min-width: 720px) {
+      #moreaMap {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
@@ -74,6 +84,26 @@
         </div>
         <p id="mapDescription" style="margin-top: 12px;">
           The world at the start of our story. Political boundaries are firm, trade routes established, and tensions simmering.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="tag">Morea Maps</p>
+      <div class="card">
+        <h3>Morea Maps 1428–1433</h3>
+        <img id="moreaMap"
+             src="../../assets/img/Mor1428%20copy.jpg"
+             alt="Morea map 1428"
+             style="width: 100%; height: auto; border-radius: var(--radius);">
+        <div class="filters" id="moreaYearFilters" style="margin-top: 12px;">
+          <button class="filter-btn active" data-year="1428">1428</button>
+          <button class="filter-btn" data-year="1431">1431</button>
+          <button class="filter-btn" data-year="1432">1432</button>
+          <button class="filter-btn" data-year="1433">1433</button>
+        </div>
+        <p id="moreaMapDescription" style="margin-top: 12px;">
+          The Morea region at the start of our story.
         </p>
       </div>
     </section>
@@ -175,6 +205,42 @@
           description.textContent = mapData[year].desc;
 
           buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      const moreaMapData = {
+        '1428': {
+          src: '../../assets/img/Mor1428%20copy.jpg',
+          desc: 'The Morea region at the start of our story.'
+        },
+        '1431': {
+          src: '../../assets/img/Mor1431%20copy.jpg',
+          desc: 'This year sees the first stirrings of conflict in Morea.'
+        },
+        '1432': {
+          src: '../../assets/img/Mor1432%20copy.jpg',
+          desc: 'Battles rage in Morea as factions vie for control.'
+        },
+        '1433': {
+          src: '../../assets/img/Mor1433%20copy.jpg',
+          desc: 'After years of struggle, Morea is transformed by new powers.'
+        }
+      };
+
+      const moreaImg = document.getElementById('moreaMap');
+      const moreaDescription = document.getElementById('moreaMapDescription');
+      const moreaButtons = document.querySelectorAll('#moreaYearFilters .filter-btn');
+
+      moreaButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const year = this.dataset.year;
+
+          moreaImg.src = moreaMapData[year].src;
+          moreaImg.alt = 'Morea map ' + year;
+          moreaDescription.textContent = moreaMapData[year].desc;
+
+          moreaButtons.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
         });
       });
