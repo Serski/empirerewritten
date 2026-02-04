@@ -874,3 +874,8 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 32px 18px 60px; }
 .ml-embedded button.primary:hover {
   box-shadow: 0 0 15px rgba(226, 179, 94, 0.6) !important;
 }
+
+/* Ensure the MailerLite embed spans the full width of the newsletter card */
+.newsletter .ml-embedded {
+  grid-column: 1 / -1;
+}
