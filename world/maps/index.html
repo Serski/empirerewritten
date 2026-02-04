@@ -83,7 +83,7 @@
           <button class="filter-btn" data-year="1433">1433</button>
         </div>
         <p id="mapDescription" style="margin-top: 12px;">
-          The world at the start of our story. Political boundaries are firm, trade routes established, and tensions simmering.
+          1428 — The world as it stands at the opening of our story.
         </p>
       </div>
     </section>
@@ -168,7 +168,7 @@
       const mapData = {
         '1428': {
           src: '../../assets/img/1428S%20copy.jpg',
-          desc: 'The world at the start of our story. Political boundaries are firm, trade routes established, and tensions simmering.'
+          desc: '1428 — The world as it stands at the opening of our story.'
         },
         '1429': {
           src: '../../assets/img/1429S%20copy.jpg',
@@ -176,19 +176,19 @@
         },
         '1430': {
           src: '../../assets/img/1430S%20copy.jpg',
-          desc: 'Borders begin to shift as rival factions test each other’s resolve. Skirmishes and alliances reshape the landscape.'
+          desc: '1430 — Early: Ioannina falls to the Ottomans. Spring: Thessaloniki falls to the Ottomans.'
         },
         '1431': {
           src: '../../assets/img/1431S%20copy.jpg',
-          desc: 'Major campaigns redraw maps. New territories are claimed and some regions fall under occupation.'
+          desc: '1431 — Winter: The Duchy of Achaia falls to Thomas’s forces.'
         },
         '1432': {
           src: '../../assets/img/1432S%20copy.jpg',
-          desc: 'Peace treaties lead to minor adjustments, while unseen currents set the stage for the coming storm.'
+          desc: '1432 — Spring: The Duchy of Athens falls to Constantine. The Albanian revolt begins.<br>Fall: Ioannina falls to Ottoman forces.<br>Christmas: Demetrios seizes control of Constantinople in a coup.'
         },
         '1433': {
           src: '../../assets/img/1433S%20copy.jpg',
-          desc: 'The culmination of years of struggle. Old empires crumble and new powers rise from the ashes.'
+          desc: '1433 — Spring: Zakynthos falls to Constantine. Summer: Livadeia and Zetouni fall to Constantine.'
         }
       };
 
@@ -202,7 +202,7 @@
 
           mapImg.src = mapData[year].src;
           mapImg.alt = 'World map ' + year;
-          description.textContent = mapData[year].desc;
+          description.innerHTML = mapData[year].desc;
 
           buttons.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
