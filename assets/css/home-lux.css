@@ -562,3 +562,24 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, input:focus-visible {
   .px-dialog-head{flex-direction:column;text-align:center;}
   #m-portrait-slot{flex:0 0 140px;width:140px;}
 }
+
+/* ── Timeline (Books I–II, single spine) ─────────────────── */
+.tl-spoiler{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--porphyry-soft);border:1px solid color-mix(in srgb,var(--porphyry) 60%,var(--border));
+  background:rgba(124,49,69,.12);padding:7px 14px;border-radius:999px;margin:8px 0 4px;}
+.tl{max-width:780px;margin:22px auto 0;}
+.tl-year-group{position:relative;padding-left:36px;}
+.tl-year-group::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--accent);opacity:.5;}
+.tl-year{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:.06em;color:var(--accent);margin:30px 0 12px -36px;position:relative;}
+.tl-year::before{content:"";position:absolute;left:2px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px var(--bg),0 0 12px rgba(200,161,78,.4);}
+.tl-ev{position:relative;margin:0 0 14px;}
+.tl-node{position:absolute;left:-27px;top:17px;width:11px;height:11px;border-radius:50%;background:var(--accent-soft);box-shadow:0 0 0 3px var(--bg),0 0 8px var(--accent);}
+.tl-card{background:linear-gradient(180deg,var(--card),#241620);border:1px solid var(--border);border-radius:11px;padding:13px 16px;}
+.tl-date{font-family:var(--display);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.85;}
+.tl-title{font-size:18px;margin:3px 0 5px;}
+.tl-desc{margin:0;color:#d6cbb5;font-size:16px;line-height:1.5;}
+.tl-fig{margin:12px 0 2px;border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.tl-fig img{display:block;width:100%;height:auto;}
+.tl-fig figcaption{font-size:13px;font-style:italic;color:var(--muted);padding:8px 12px;background:var(--bg-2);}
+@media (max-width:600px){.tl-year{font-size:20px;}}
