@@ -331,6 +331,7 @@
             <div class="tl-date">September</div>
             <h3 class="tl-title">The Battle of Domokos</h3>
             <p class="tl-desc">In a decisive field engagement, Constantine’s modernized army defeats Sultan Murad II’s main host, forcing the Sultan to retreat northward.</p>
+            <figure class="tl-fig"><img src="../../assets/img/domokos-1433.jpg" data-full="../../assets/img/domokos-1433.jpg" alt="Map of the 1433 northern campaign and the Battle of Domokos" loading="lazy"><figcaption>The 1433 northern campaign, culminating at Domokos.</figcaption></figure>
           </div>
         </div>
         <div class="tl-ev">
@@ -599,5 +600,19 @@
   </footer>
 
   <script src="../../assets/js/site.js"></script>
+<script>
+(function(){
+  var figs=document.querySelectorAll('.tl-fig img');
+  if(!figs.length) return;
+  var lb=document.createElement('div');lb.className='tl-lightbox';
+  lb.innerHTML='<button class="tl-lb-close" aria-label="Close">&times;</button><img alt="">';
+  document.body.appendChild(lb);
+  var big=lb.querySelector('img');
+  figs.forEach(function(t){t.addEventListener('click',function(){big.src=t.getAttribute('data-full')||t.src;lb.classList.add('open');document.body.style.overflow='hidden';});});
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.className==='tl-lb-close')close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
 </body>
 </html>

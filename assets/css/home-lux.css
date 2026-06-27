@@ -583,3 +583,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, input:focus-visible {
 .tl-fig img{display:block;width:100%;height:auto;}
 .tl-fig figcaption{font-size:13px;font-style:italic;color:var(--muted);padding:8px 12px;background:var(--bg-2);}
 @media (max-width:600px){.tl-year{font-size:20px;}}
+
+/* Timeline figure + lightbox */
+.tl-fig{cursor:zoom-in;}
+.tl-lightbox{position:fixed;inset:0;background:rgba(10,6,9,.9);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;overflow:auto;}
+.tl-lightbox.open{display:flex;}
+.tl-lightbox img{max-width:100%;max-height:90vh;border-radius:10px;border:1px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,.6);}
+.tl-lb-close{position:fixed;top:12px;right:18px;font-size:30px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;font-family:var(--serif);}
