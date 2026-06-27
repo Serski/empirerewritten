@@ -60,7 +60,6 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 /* ── Header ──────────────────────────────────────────────── */
 header.site-header {
   background: rgba(20, 12, 17, 0.92);
-  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   position: sticky; top: 0; z-index: 20;
 }
