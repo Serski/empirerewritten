@@ -12,7 +12,12 @@
       "instagram": "",
       "tiktok": "",
       "youtube": ""
-    }
+    },
+    "scribbleHubUrl": "",
+    "spaceBattlesUrl": "",
+    "sufficientVelocityUrl": "",
+    "wattpadUrl": "",
+    "alternateHistoryUrl": ""
   },
   "baseUrl": "",
   "baseUrlNote": "Set when deploying to a custom domain or path if desired.",
