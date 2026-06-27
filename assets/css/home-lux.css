@@ -570,7 +570,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, input:focus-visible {
 .tl{max-width:780px;margin:22px auto 0;}
 .tl-year-group{position:relative;padding-left:36px;}
 .tl-year-group::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--accent);opacity:.5;}
-.tl-year{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:.06em;color:var(--accent);margin:30px 0 12px -36px;position:relative;}
+.tl-year{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:.06em;color:var(--accent);margin:30px 0 12px -36px;padding-left:32px;position:relative;}
 .tl-year::before{content:"";position:absolute;left:2px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;
   background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px var(--bg),0 0 12px rgba(200,161,78,.4);}
 .tl-ev{position:relative;margin:0 0 14px;}
